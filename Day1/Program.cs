@@ -4,6 +4,17 @@
     {
         
     }
+
+    public static string LetterGrade(double gpa)
+    {
+        return _ = gpa switch
+        {
+            >= 3.7 => "A",
+            >= 2.7 => "B",
+            >= 1.7 => "C",
+            _ => "D"
+        };
+    }
 }
 
 class Student
