@@ -12,3 +12,4 @@
 /Users/letanthang/learning_software/csharp-practice/Day1/obj/Debug/net10.0/Day1.pdb
 /Users/letanthang/learning_software/csharp-practice/Day1/obj/Debug/net10.0/Day1.genruntimeconfig.cache
 /Users/letanthang/learning_software/csharp-practice/Day1/obj/Debug/net10.0/ref/Day1.dll
+/Users/letanthang/learning_software/csharp-practice/Day1/obj/Debug/net10.0/Day1.sourcelink.json
