@@ -6,6 +6,16 @@
         var b = new Student("Alex", 16, 3);
         var c = new Student("Nolan", 17, 2);
 
+        try
+        {
+            var invalid = new Student("hehe", 50, 5);
+            
+        } catch (ArgumentException e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
+        
         // List<Student> students = new List<Student>() {a, b, c};
         List<Student> students = [];
         
@@ -29,6 +39,11 @@
             >= 1.7 => "C",
             _ => "D"
         };
+    }
+
+    public string DescribeStudent(Student s)
+    {
+        return s != null ? s.ToString() : "No student";
     }
 }
 
