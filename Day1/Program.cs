@@ -1,4 +1,6 @@
-﻿class Test
+﻿using System.Reflection;
+
+class Test
 {
     public static void Main(String[] strings)
     {
@@ -13,7 +15,9 @@
         } catch (ArgumentException e)
         {
             Console.WriteLine(e.Message);
+            Console.WriteLine(DescribeStudent(null));
         }
+
 
         
         // List<Student> students = new List<Student>() {a, b, c};
@@ -41,7 +45,7 @@
         };
     }
 
-    public string DescribeStudent(Student s)
+    public static string DescribeStudent(Student? s)
     {
         return s != null ? s.ToString() : "No student";
     }
