@@ -2,7 +2,22 @@
 {
     public static void Main(String[] strings)
     {
+        var a = new Student("John", 17, 3.5);
+        var b = new Student("Alex", 16, 3);
+        var c = new Student("Nolan", 17, 2);
+
+        // List<Student> students = new List<Student>() {a, b, c};
+        List<Student> students = [];
         
+        students.Add(a);
+        students.Add(b);
+        students.Add(c);
+
+        foreach(Student student in students)
+        {
+            string grade = LetterGrade(student.GPA);
+            Console.WriteLine($"Name: {student.Name}, Age: {student.Age}, grade: {grade}");
+        }
     }
 
     public static string LetterGrade(double gpa)
