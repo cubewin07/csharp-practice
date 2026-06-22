@@ -1,4 +1,6 @@
-﻿class Collections_LINQ
+﻿using System.Collections;
+
+class Collections_LINQ
 {
     static void Main(String[] args)
     {
@@ -35,7 +37,7 @@ class MapKeyPair<K, V>
     public V Value {get; set;}
 }
 
-class CustomMap<K, V>
+class CustomMap<K, V> : IEnumerable<MapKeyPair<K,V>>
 {
     private List<MapKeyPair<K, V>> _map = []; 
 
@@ -53,5 +55,23 @@ class CustomMap<K, V>
             var pair = _map.FirstOrDefault(p => p.Key.Equals(key)) ?? throw new KeyNotFoundException("No pair found");
             return pair.Value;
         }
+    }
+
+    public IEnumerable<MapKeyPair<K,V>> GetEnumerator()
+    {
+        foreach(var pair in _map)
+        {
+            yield return pair;
+        }
+    }
+
+    IEnumerator<MapKeyPair<K, V>> IEnumerable<MapKeyPair<K, V>>.GetEnumerator()
+    {
+        throw new NotImplementedException();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        throw new NotImplementedException();
     }
 }
