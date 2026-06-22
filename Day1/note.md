@@ -21,3 +21,18 @@ Understanding:
     a. In C#, List<> is the same as ArrayList<> which implements IList<T> interfaces.
 
 
+Object initializers:
+
+1. Compact syntax of setting that is later expanded by compiler
+    
+    Example:
+        var s = new Student {Name = name, Age = age}
+
+        In compile time:
+        var s = new Student()
+        s.Name = name;
+        s.Age = age;
+
+    Because of this, required (properties must be set on call site - new()) works well with Object initializers.
+        Compiler can check whether required properties are set
+        While standard constructor set properties inside the object, therefore, compiler cannot ensure those required properties are set on call site
