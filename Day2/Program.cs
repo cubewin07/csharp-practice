@@ -22,5 +22,8 @@
         {
             Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
         }
+
+        // Check existence
+        bool exists = students.ContainsKey("Alice");
     }
 }
