@@ -67,6 +67,10 @@ class CustomMap<K, V> : IEnumerable<MapKeyPair<K,V>>
         return _map.Any(p => p.Value.Equals(value));
     }
 
+    public bool Remove(K key)
+    {
+        return _map.RemoveAll(p => p.Key.Equals(key)) > 0 ;
+    }
 
 
 
