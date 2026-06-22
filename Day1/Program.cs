@@ -85,3 +85,28 @@ class Student
         return $"Name: {Name}, Age: {Age}, GPA: {_gpa}";
     }
 }
+
+// Primary constructor 
+// Can only use with auto-properties
+// For custom setter logic, use regular constructor
+
+// class StudentA(string name, int age, double gpa = 0)
+// {
+//     private double _gpa;
+//     public string Name { get; set; } = name;
+//     public int Age { get; set; } = age;
+
+//     // public double GPA
+//     // {
+//     //     get => _gpa;
+//     //     set
+//     //     {
+//     //         if (value < 0 || value > 4) throw new ArgumentException("Invalid GPA");
+//     //         _gpa = value;
+//     //     }
+//     // }
+
+//     public double GPA {get; set;} = gpa;
+
+
+// }
