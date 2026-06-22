@@ -37,26 +37,21 @@ class MapKeyPair<K, V>
 
 class CustomMap<K, V>
 {
-    private List<MapKeyPair<K, V>> _map; 
-
-    public CustomMap() {
-        _map = [];
-    }
+    private List<MapKeyPair<K, V>> _map = []; 
 
     public V this[K key]
     {
-        get
-        {
-            var pair = _map.FirstOrDefault(p => p.Key.Equals(key));
-            return pair?.Value ?? throw new KeyNotFoundException("Key not found");
-        }
         set
         {
             var pair = _map.FirstOrDefault(p => p.Key.Equals(key));
             if(pair != null) pair.Value = value;
-            var newPair = new MapKeyPair<K, V> {Key = key, Value = value};
-            _map.Add(newPair);
+            else _map.Add(new() {Key = key, Value = value});
+            
+        }
+        get
+        {
+            var pair = _map.FirstOrDefault(p => p.Key.Equals(key)) ?? throw new KeyNotFoundException("No pair found");
+            return pair.Value;
         }
     }
-
 }
