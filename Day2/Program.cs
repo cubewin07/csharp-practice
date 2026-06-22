@@ -62,6 +62,10 @@ class CustomMap<K, V> : IEnumerable<MapKeyPair<K,V>>
         return _map.Any(p => p.Key.Equals(key));
     }
 
+    public bool ContainsValue(V value)
+    {
+        return _map.Any(p => p.Value.Equals(value));
+    }
 
 
 
