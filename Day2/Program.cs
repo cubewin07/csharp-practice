@@ -57,6 +57,15 @@ class CustomMap<K, V> : IEnumerable<MapKeyPair<K,V>>
         }
     }
 
+    public bool ContainsKey(K key)
+    {
+        return _map.FirstOrDefault(p => p.Key.Equals(key)) != null;
+    }
+
+
+
+
+
     public IEnumerable<MapKeyPair<K,V>> GetEnumerator()
     {
         foreach(var pair in _map)
