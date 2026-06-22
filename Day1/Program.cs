@@ -4,9 +4,12 @@ class Test
 {
     public static void Main(String[] strings)
     {
-        var a = new Student("John", 17, 3.5);
-        var b = new Student("Alex", 16, 3);
-        var c = new Student("Nolan", 17, 2);
+        // Modern Object creation - Target-typed new(), only happen when you already declared the type
+        Student a = new("John", 17, 3.5);
+        // Object initializer - new no args constructor
+        var b = new Student { Name = "Alex", Age = 15, GPA = 3.8};
+        // Named arguments
+        var c = new Student(gpa: 4, name: "Nolan", age: 17);
 
         try
         {
@@ -56,6 +59,8 @@ class Student
     private double _gpa;
     public string Name {get; set;}
     public int Age {get; set;}
+
+    public Student() { }
 
     public Student(string name, int age, double gpa)
     {
