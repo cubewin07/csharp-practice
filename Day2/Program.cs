@@ -27,3 +27,36 @@
         bool exists = students.ContainsKey("Alice");
     }
 }
+
+
+class MapKeyPair<K, V>
+{
+    public K Key{get; set;}
+    public V Value {get; set;}
+}
+
+class CustomMap<K, V>
+{
+    private List<MapKeyPair<K, V>> _map; 
+
+    public CustomMap() {
+        _map = [];
+    }
+
+    public V this[K key]
+    {
+        get
+        {
+            var pair = _map.FirstOrDefault(p => p.Key.Equals(key));
+            return pair?.Value ?? throw new KeyNotFoundException("Key not found");
+        }
+        set
+        {
+            var pair = _map.FirstOrDefault(p => p.Key.Equals(key));
+            if(pair != null) pair.Value = value;
+            var newPair = new MapKeyPair<K, V> {Key = key, Value = value};
+            _map.Add(newPair);
+        }
+    }
+
+}
