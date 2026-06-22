@@ -16,5 +16,11 @@
         {
             Console.WriteLine(gpa);
         }
+
+        // Iterate
+        foreach(var kvp in students)
+        {
+            Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
+        }
     }
 }
