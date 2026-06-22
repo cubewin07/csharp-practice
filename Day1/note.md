@@ -21,6 +21,22 @@ Understanding:
     a. In C#, List<> is the same as ArrayList<> which implements IList<T> interfaces.
 
 
+How new object is created:
+    2 ways:
+        a. Normal new object():
+            1. Allocate memory - reserves a chunk of memory for this object, all fields default (null, 0)
+            2. Run the constructor
+            3. Return the reference to that object
+        b. Object initializers:
+            1. Allocate memory
+            2. Run the constructor - no args constructor (this is why no args constructor is required) even though it does nothing.
+            3. Get reference (object - o)
+            4. Perform setter logic in {}
+                ex: { Name = "John", Id = number - variable} 
+                    => o.Name = "John"; o.Id = number
+            5. Return the reference to that object with every field in {} is set
+
+
 Object initializers:
 
 1. Compact syntax of setting that is later expanded by compiler
