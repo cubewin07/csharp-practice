@@ -1,0 +1,15 @@
+/Users/letanthang/learning_software/csharp-practice/Day2/bin/Debug/net10.0/Day2
+/Users/letanthang/learning_software/csharp-practice/Day2/bin/Debug/net10.0/Day2.deps.json
+/Users/letanthang/learning_software/csharp-practice/Day2/bin/Debug/net10.0/Day2.runtimeconfig.json
+/Users/letanthang/learning_software/csharp-practice/Day2/bin/Debug/net10.0/Day2.dll
+/Users/letanthang/learning_software/csharp-practice/Day2/bin/Debug/net10.0/Day2.pdb
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/Day2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/Day2.AssemblyInfoInputs.cache
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/Day2.AssemblyInfo.cs
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/Day2.csproj.CoreCompileInputs.cache
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/Day2.sourcelink.json
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/Day2.dll
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/refint/Day2.dll
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/Day2.pdb
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/Day2.genruntimeconfig.cache
+/Users/letanthang/learning_software/csharp-practice/Day2/obj/Debug/net10.0/ref/Day2.dll

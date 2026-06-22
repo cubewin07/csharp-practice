@@ -10,5 +10,11 @@
 
         students["Alice"] = 3.9;
         students["Johb"] = 2.8;
+
+        // Safe lookup - avoids KeyNotFoundException
+        if(students.TryGetValue("Alice", out double gpa))
+        {
+            Console.WriteLine(gpa);
+        }
     }
 }
