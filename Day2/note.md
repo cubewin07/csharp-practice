@@ -35,3 +35,32 @@ New things learnt:
         )
 
         => Chained LINQ becomes one chained method.
+
+
+    Advanced (LINQ):
+        In LINQ, most methods use foreach - which use IEnumerable and yield return item => Making it only needs to perform on demand.
+
+    <!-- Explain -->
+
+    with yield, it waits until the current item is digested and new request comes.
+    By using foreach, internally, it calls enumerator.MoveNext(), breaking yield and makes the foreach of the source continue to return new item.
+
+
+    Therefore, when you are calling foreach to a list, it is 2 foreach talking to each other with the list respectively return the item when our foreach request more.
+
+        <!-- foreach compiled to while -->
+    foreach(var item : source) 
+        ||
+        \/
+    var enumerator = source.GetEnumerator();
+    while(enumerator.MoveNext()){
+        var item = enumerator.Current;
+        // Body of foreach
+    }
+
+
+    <!-- How enumerator.MoveNext() works -->
+
+    1. it breaks the yield and waits until the source return item.
+    2a - if item returns. Then it set enumerator.Current = item then return true;
+    2b - if item does not return. Return false
