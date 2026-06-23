@@ -72,6 +72,11 @@ class CustomMap<K, V> : IEnumerable<MapKeyPair<K,V>>
         return _map.RemoveAll(p => p.Key.Equals(key)) > 0 ;
     }
 
+    public List<K> Keys(K key)
+    {
+        return _map.Select(p => p.Key).ToList();
+    }
+
 
 
     public IEnumerable<MapKeyPair<K,V>> GetEnumerator()
