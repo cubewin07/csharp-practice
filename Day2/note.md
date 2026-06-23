@@ -64,3 +64,25 @@ New things learnt:
     1. it breaks the yield and waits until the source return item.
     2a - if item returns. Then it set enumerator.Current = item then return true;
     2b - if item does not return. Return false
+
+
+    How it applies to LINQ (Chained)
+        - Because of extension method, the last method initiates first.
+        - If it uses foreach, source is called with method MoveNext().
+        - Because at first, everything is not started, the first item is gotten by calling source.MoveNext() on the upstream enumerator.
+        - This happens until it reaches the list which will return the first item. 
+        - Then function of the first LINQ method is executed and yield return the item if pass. It waits until new request to get more item from the list
+        - The item reaches the last method if every execution passess. After that it requests more.
+        - The loop keeps running until one of the chain failed and dont have any item to pass. From here, source.MoveNext() on the caller start getting false, stopping the loop.
+
+    <!-- Explains upstream and downstream (the magic) -->
+            Ex:
+        students.Where(s => s.GPA > 3).Select(s => s.Name)
+
+        source in Select is Where(students, function) => calling source.MoveNext() in Select requests new item from Where which then call its source.MoveNext(), eventually reaching students.
+
+        students here is the source of every source and the upstream of every method.
+        while Select() is the downstream of every method.
+
+        Upstream means closer to the source
+        Downstream means closer to the consumer
