@@ -1,4 +1,6 @@
-﻿class FinalDay
+﻿using System.Globalization;
+
+class FinalDay
 {
     public static void Main(string[] args)
     {
@@ -77,6 +79,32 @@
     public static List<Student> PassStudent(List<Student> students)
     {
         return students.Where(s => s.Score >= 50).Where(s => s.Grade.Equals("Pass")).ToList();
+    }
+
+    public static bool TwoSum(List<int> nums, int target) {
+        for(int i  = 0; i < nums.Count; i++) {
+            for(int j = 0; j < nums.Count; j++) {
+                if(nums[i] + nums[j] == target) 
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static int MaxValI(List<int> nums, out int index) {
+        var max = -10;
+        var ind = 0;
+
+        for(int i = 0; i < nums.Count; i++) {
+            if(nums[i] > max) {
+                max = nums[i];
+                ind = i;
+            };
+        }
+
+        index = ind;
+        return max;
     }
 }
 
