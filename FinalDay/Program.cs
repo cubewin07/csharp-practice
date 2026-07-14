@@ -83,7 +83,7 @@ class FinalDay
 
     public static bool TwoSum(List<int> nums, int target) {
         for(int i  = 0; i < nums.Count; i++) {
-            for(int j = 0; j < nums.Count; j++) {
+            for(int j = i + 1; j < nums.Count; j++) {
                 if(nums[i] + nums[j] == target) 
                     return true;
             }
