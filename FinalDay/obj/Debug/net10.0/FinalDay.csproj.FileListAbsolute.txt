@@ -1,0 +1,15 @@
+/Users/letanthang/learning_software/csharp-practice/FinalDay/bin/Debug/net10.0/FinalDay
+/Users/letanthang/learning_software/csharp-practice/FinalDay/bin/Debug/net10.0/FinalDay.deps.json
+/Users/letanthang/learning_software/csharp-practice/FinalDay/bin/Debug/net10.0/FinalDay.runtimeconfig.json
+/Users/letanthang/learning_software/csharp-practice/FinalDay/bin/Debug/net10.0/FinalDay.dll
+/Users/letanthang/learning_software/csharp-practice/FinalDay/bin/Debug/net10.0/FinalDay.pdb
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/FinalDay.GeneratedMSBuildEditorConfig.editorconfig
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/FinalDay.AssemblyInfoInputs.cache
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/FinalDay.AssemblyInfo.cs
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/FinalDay.csproj.CoreCompileInputs.cache
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/FinalDay.sourcelink.json
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/FinalDay.dll
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/refint/FinalDay.dll
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/FinalDay.pdb
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/FinalDay.genruntimeconfig.cache
+/Users/letanthang/learning_software/csharp-practice/FinalDay/obj/Debug/net10.0/ref/FinalDay.dll
