@@ -5,7 +5,19 @@
         List<int> nums = [2,5,4,6];
         List<string> names = ["Thang", "cubewin", "BrIan"];
         List<int> arr1 = [32, 43, 4, 3, 46, 50];
+        
+        // Sample student list
+        var students = new List<Student>
+        {
+            new Student { Name = "Alice", Score = 92, Grade = "Pass" },
+            new Student { Name = "Bob", Score = 47, Grade = "Fail" },
+            new Student { Name = "Carlos", Score = 76, Grade = "Pass" },
+        };
 
+        // Print passing students using helper
+        var passing = PassStudent(students);
+        Console.WriteLine("Passing students:");
+        passing.ForEach(s => Console.WriteLine(s.Name));
 
         Console.WriteLine(Sum(nums));
         Console.WriteLine(Find(names, "brian"));
@@ -61,4 +73,16 @@
 
         return nums;
     }
+
+    public static List<Student> PassStudent(List<Student> students)
+    {
+        return students.Where(s => s.Score >= 50).Where(s => s.Grade.Equals("Pass")).ToList();
+    }
+}
+
+class Student
+{
+    public string Name {get; set;}
+    public int Score {get; set;}
+    public string Grade {get; set;}
 }
