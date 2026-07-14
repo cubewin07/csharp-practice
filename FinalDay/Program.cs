@@ -9,7 +9,9 @@
 
         Console.WriteLine(Sum(nums));
         Console.WriteLine(Find(names, "brian"));
-        FilterAbove(arr1, 10).ForEach(num => Console.WriteLine(num));
+        // FilterAbove(arr1, 10).ForEach(num => Console.WriteLine(num));
+        CustomSort(arr1).ForEach(Console.WriteLine);
+        
 
     }
 
@@ -39,5 +41,24 @@
     public static List<int> FilterAbove(List<int> nums, int threshold)
     {
         return nums.Where(num => num > threshold).ToList();
+    }
+
+    public static List<int> CustomSort(List<int> arr)
+    {
+        var nums = new List<int>(arr);
+        for(int i = 0; i < nums.Count; i++)
+        {
+            for(int j = i + 1; j < nums.Count; j++)
+            {
+                if(nums[j] < nums[i])
+                {
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                }
+            }
+        }
+
+        return nums;
     }
 }
